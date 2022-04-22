@@ -1568,6 +1568,7 @@ footer p span {
 .tooltip {
     position: relative;
     display: inline-block;
+    font-size: 16px;
     border-bottom: 1px dotted black;
     opacity: 1;
 }
