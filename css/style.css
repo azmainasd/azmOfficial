@@ -1019,15 +1019,16 @@ header {
 }
 
 .work_info p {
-    font-size: 15px;
+    font-size: 12px;
     margin-top: 5px;
     font-weight: 600;
     position: relative;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     color: #000;
 }
 
-.work_info p::after {
+
+/* .work_info p::after {
     position: absolute;
     content: "";
     height: 1px;
@@ -1040,7 +1041,7 @@ header {
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
-}
+} */
 
 .work-popup {
     position: relative;

@@ -157,26 +157,48 @@
 
         /* 08. ProjectDetails Init
         ============================ */
+
         function projectDetails() {
-            $('.ajax-popup-link').magnificPopup({
-                settings: null,
-                type: 'ajax',
-                closeOnContentClick: false,
-                closeBtnInside:false,
-                callbacks:{
-                    ajaxContentAdded: function() {
-                      $(".mfp-content").find("*").addClass("mfp-prevent-close");
-                    },
-                    open: function() {
-                        $('html').addClass('layout-fixed');
-                    },
-                    close: function() {
-                        $('html').removeClass('layout-fixed');
+            $('.popup-window').magnificPopup({
+                type: 'inline',
+                preloader: false,
+                focus: '#name',
+
+                // When elemened is focused, some mobile browsers in some cases zoom in
+                // It looks not nice, so we disable it:
+                callbacks: {
+                    beforeOpen: function() {
+                        if ($(window).width() < 700) {
+                            this.st.focus = false;
+                        } else {
+                            this.st.focus = '#name';
+                        }
                     }
-                 }
+                }
             });
         };
+        
         projectDetails();
+        // function projectDetails() {
+        //     $('.ajax-popup-link').magnificPopup({
+        //         settings: null,
+        //         type: 'ajax',
+        //         closeOnContentClick: false,
+        //         closeBtnInside:false,
+        //         callbacks:{
+        //             ajaxContentAdded: function() {
+        //               $(".mfp-content").find("*").addClass("mfp-prevent-close");
+        //             },
+        //             open: function() {
+        //                 $('html').addClass('layout-fixed');
+        //             },
+        //             close: function() {
+        //                 $('html').removeClass('layout-fixed');
+        //             }
+        //          }
+        //     });
+        // };
+       
 
         /* 09. TestimonialCarousel Init
         ============================ */
