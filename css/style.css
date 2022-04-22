@@ -1618,3 +1618,54 @@ footer p span {
         align-items: center;
     }
 }
+
+@media (max-width: 400px) {
+    .landing_wrapper.bg-img.mobile {
+        display: block;
+    }
+    .landing_wrapper.bg-img.lg-screen {
+        display: none;
+    }
+    .landing_content h1 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+    .intro .intro-subtitle {
+        font-size: 1.2rem;
+    }
+    .tooltip .tooltiptext {
+        width: 185px;
+    }
+    .tooltip .tooltiptext::after {
+        top: 100%;
+        left: 92%;
+    }
+}
+
+@media (max-width: 799px) {
+    .landing_wrapper.bg-img.mobile {
+        display: block;
+    }
+    .landing_wrapper.bg-img.lg-screen {
+        display: none;
+    }
+    .landing_content h1 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+    .landing_content h1 {
+        color: #ffffff;
+    }
+    .intro .intro-subtitle strong {
+        color: #ffffff;
+    }
+}
+
+@media (min-width: 800px) {
+    .landing_wrapper.bg-img.mobile {
+        display: none;
+    }
+    .landing_wrapper.bg-img.lg-screen {
+        display: block;
+    }
+}

@@ -75,7 +75,7 @@
     <!-- end header  -->
 
     <!--  landing wrapper  -->
-    <div class="landing_wrapper bg-img" data-src="img/banner02.jpeg">
+    <div class="landing_wrapper bg-img lg-screen" data-src="img/banner02.jpeg">
         <div class="home_wrapper">
             <div class="landing_content">
                 <div class="container">
@@ -98,6 +98,30 @@
             </div>
         </div>
     </div>
+    <div class="landing_wrapper bg-img mobile" data-src="img/mobileBanner.jpg">
+        <div class="home_wrapper">
+            <div class="landing_content">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <h5 class="title-slide-in" data-splitting>Hi There, I'm</h5>
+                            <h1 class="title-slide-in" data-splitting>Abdullah Hel Azmain</h1>
+
+                            <div id="home" class="intro">
+                                <p class="intro-subtitle">
+                                    <span class="text-slider-items">Front-End Developer, Full Stack Web Developer ,Front-End Developer ,Laravel Developer ,Python Developer </span>
+                                    <strong class="text-slider">Python Developer</strong>
+                                    <!-- <span class="text-slider title-slide-in" data-splitting>Full-stack Developer</span> -->
+                                    <span class="typed-cursor" style="animation-iteration-count: 0;"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- end landing wrapper  -->
 
     <div class="container">
@@ -520,6 +544,18 @@
             console.log('got it')
             var typed_strings = $('.text-slider-items').text();
             var typed = new Typed('.text-slider', {
+                strings: typed_strings.split(','),
+                typeSpeed: 80,
+                loop: true,
+                backDelay: 1100,
+                backSpeed: 30
+            });
+        }
+        /*--/Responsive Star Typed /--*/
+        if ($('.mobile .text-slider').length == 1) {
+            console.log('got it')
+            var typed_strings = $('.mobile .text-slider-items').text();
+            var typed = new Typed('.mobile .text-slider', {
                 strings: typed_strings.split(','),
                 typeSpeed: 80,
                 loop: true,
